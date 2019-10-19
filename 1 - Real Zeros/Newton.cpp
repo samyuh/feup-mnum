@@ -10,11 +10,7 @@ double iteratorNewton(double x) { return f(x) / df(x); }
 
 void Newton(double guess, int steps)
 {
-	for (int i = 0; i < steps; i++)
-	{
-		guess -= iteratorNewton(guess);
-	}
-
+	for (int i = 0; i < steps; i++) {guess -= iteratorNewton(guess); }
 
 	cout << "X: " << guess << endl;
 	cout << "Steps: " << steps << endl << endl;
