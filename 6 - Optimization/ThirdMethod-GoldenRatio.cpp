@@ -10,40 +10,6 @@ double quadratic_interpolation(double x1, double x2, double x3){
     return x2 + ((x2-x1) * (sin(x1) - sin(x3))) / (2*(sin(x3)-2*sin(x2)+sin(x1)));
 }
 
-double golden_proportion(double x1, double x2) {
-    while(abs(x2 - x1) >= 0.001) {
-        double x3 = x1 + A * (x2 - x1);
-        double x4 = x1 + B * (x2 - x1);
-        if(f(x3) < f(x4))
-            x2 = x4;
-        else
-            x1 = x3;
-    }
-
-    return x1;
-}
-/* Not working
-double golden_proportion_optimized(double a, double b) {
-    double c = ((b - a) * B) - b;
-    double d = ((b - a) * B) + a;
-    double fc = sin(c);
-    double fd = sin(d);
-    while(abs(b - a) > 0.01) {
-       if (fc < fd){
-           a = c;
-           c = (b-a)*B - b;
-           fc = sin(c);
-       }
-       else {
-        b = d;
-        d = a + (b-a)*B;
-        fd = sin(d);
-       }
-    }
-    return a;
-}
-*/
-
 double method_of_thirds(double x0, double x1) {
     while(abs(x1 - x0) > 0.000000001) {
         double x2 = x0 + ((x1 - x0) / 3);
@@ -55,6 +21,19 @@ double method_of_thirds(double x0, double x1) {
             x1 = x3;
     }
     return x0;
+}
+
+double golden_ratio(double x1, double x2) {
+    while(abs(x2 - x1) >= 0.001) {
+        double x3 = x1 + A * (x2 - x1);
+        double x4 = x1 + B * (x2 - x1);
+        if(f(x3) < f(x4))
+            x2 = x4;
+        else
+            x1 = x3;
+    }
+
+    return x1;
 }
 
 double unidimensional_search(double guess){
@@ -70,10 +49,9 @@ double unidimensional_search(double guess){
         x2 = x2 + step;
         std::cout << "Interval: " << x0 << " " << x1 << " " << x2 << " " << std::endl;
     }
+
     return golden_proportion(x0,x2);
 }
-
-
 
 int main() {
     std::cout << "Final Value: " <<  golden_proportion(-1,0);

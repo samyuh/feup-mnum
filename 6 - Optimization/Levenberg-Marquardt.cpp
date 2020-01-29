@@ -18,7 +18,8 @@ double  f(double x, double y) { return pow(x + 1, 2) + pow(y - 4, 2); }
 double dfx(double x, double y) { return 2 * (x + 1); }
 double dfy(double x, double y) { return 2 * (y - 4); }
 double  invHxdelta(double x, double y) { return x + 1; }
-double  invHydelta(double x, double y) { return y - 4; } */
+double  invHydelta(double x, double y) { return y - 4; }
+ */
 
 
 
@@ -44,8 +45,8 @@ void levenberg_marquardt(double x0, double y0, double lambda, int n) {
 
 int main() {
 	double x0, y0;
+
 	// Exercise 1
-	
 	x0=1;
 	y0=1;
 	levenberg_marquardt(x0, y0, 1, 14);
@@ -54,7 +55,8 @@ int main() {
 	/*
 	x0 = 0;
 	y0 = 0;
-	levenberg_marquardt(x0, y0, 0.1, 4);*/
+	levenberg_marquardt(x0, y0, 0.1, 4);
+	 */
 
 	return 0;
 }
