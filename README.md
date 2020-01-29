@@ -33,7 +33,7 @@
 * Second Order Runge-Kutta Method
 * Fourth Order Runge-Kutta Method
 
-# Optimization
+### Optimization
 
 **Unidimensional Optimization**
 
