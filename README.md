@@ -7,7 +7,7 @@
 - **Course**: [MIEIC](https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=742&pv_ano_lectivo=2019)
 - **Curricular Unit**: [MNUM](https://sigarra.up.pt/feup/en/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436436)
 
-# Numerical methods implemented during course
+## Numerical methods implemented during course
 ### Real Zeros
 
 * Bisection Method
@@ -50,12 +50,12 @@
 * Quadric Method
 * Levenberg-Marquardt Method
 
-### Tools Used
+## Tools Used
 
 - Python
 - C++
 - Maxima
 
-### Disclaimer
+## Disclaimer
 
 This repository was used for educational purposes. The solutions here may not be the most efficient ones. You can use the code at your own risk.
